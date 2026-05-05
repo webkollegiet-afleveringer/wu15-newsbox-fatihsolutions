@@ -1,0 +1,73 @@
+.news-card {
+    display: flex;
+    gap: 16px;
+
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+
+    align-items: center;
+}
+
+
+.news-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+
+}
+
+.news-desc {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+
+.health__logo {
+    display: flex;
+    gap: 1em;
+    width: 1em;
+    align-items: center;
+}
+
+.health {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+article {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+
+}
+
+.news-title {
+    margin: 0;
+    font-size: 15px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    margin-left: 1em;
+    margin-left: 6em;
+    background-color: #555;
+    padding: 0.3em;
+    border-radius: 1em;
+    display: none;
+
+
+}
