@@ -2,11 +2,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import { Link } from 'react-router-dom';
 import Home from './views/home';
-import News from './views/news';
-import useFetchData from './hooks/usefetch';
-import useCachedFetchData from './hooks/use-cached-fetch';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import Layout from './components/layout/layout';
+import Settings from './views/settings';
+import Archive from './views/archive';
 
 
 const queryClient = new QueryClient()
@@ -17,9 +17,11 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/news/id:' element={<News />} />
-
+          <Route element={<Layout />}>
+            <Route path='/' element={<Home />} />
+            <Route path='/archive' element={<Archive />} />
+            <Route path='/settings' element={<Settings />} />
+          </Route>
 
         </Routes>
       </BrowserRouter>

@@ -1,0 +1,78 @@
+:root {
+    --switch-width: 60px;
+    --switch-height: calc(var(--switch-width)/2);
+    --switch-border-radius: calc(var(--switch-height)/2)
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+.header_settings {
+    font-family: "Open Sans";
+    text-align: center;
+    color: #4D861F;
+}
+
+.subheading_settings {
+    text-align: center;
+}
+
+.settings-active {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.settings-category {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 0.5em;
+    align-items: center;
+}
+
+.settings-img {
+    width: 30px;
+    height: 30px;
+}
+
+.switch {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.switch_input {
+    display: none;
+}
+
+.switch_input:checked+.switch_control {
+    background-color: lime;
+}
+
+.switch_input:checked+.switch_control::after {
+    transform: translateX(100%);
+    scale: (1.1);
+}
+
+.switch_control {
+    position: relative;
+    width: var(--switch-width);
+    height: var(--switch-height);
+    background-color: #ddd;
+    border-radius: var(--switch-border-radius);
+
+}
+
+.switch_control::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--switch-height);
+    height: 100%;
+    background-color: white;
+    border-radius: var(--switch-border-radius);
+    box-shadow: 0 0 5px darkgray;
+    transform: scale(1.1);
+}
